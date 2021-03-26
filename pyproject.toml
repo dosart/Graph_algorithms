@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "hexlet-python-package"
+version = "0.3.0"
+description = ""
+authors = ["skip"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+[tool.poetry.dev-dependencies]
+wemake-python-styleguide = "^0.14.1"
+pytest = "^6.1.0"
+pytest-cov = "^2.11.1"
+
+[tool.poetry.scripts]
+hexlet-python-package = "hexlet_python_package.scripts.hexlet_python_package:main"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
