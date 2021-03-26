@@ -1,8 +1,13 @@
 [tool.poetry]
-name = "hexlet-python-package"
+name = "graph algorithms"
 version = "0.3.0"
-description = ""
-authors = ["skip"]
+description = "graph algorithms implementation"
+authors = ["Denis <Dysprosium92@ya.ru>"]
+license = "MIT"
+readme = "README.md"
+packages = [
+    { include = "algoritms" },
+]
 
 [tool.poetry.dependencies]
 python = "^3.6"

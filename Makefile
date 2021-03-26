@@ -2,13 +2,13 @@ install:
 	poetry install
 
 test:
-	poetry run pytest hexlet_python_package tests
+	poetry run pytest algoritms tests
 
 test-coverage:
-	poetry run pytest --cov=hexlet_python_package --cov-report xml tests
+	poetry run pytest --cov=algoritms --cov-report xml tests
 
 lint:
-	poetry run flake8 hexlet_python_package
+	poetry run flake8 algoritms
 
 selfcheck:
 	poetry check
