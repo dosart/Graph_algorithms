@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "graph algorithms"
-version = "0.3.0"
+version = "0.1.0"
 description = "graph algorithms implementation"
 authors = ["Denis <Dysprosium92@ya.ru>"]
 license = "MIT"
@@ -10,17 +10,13 @@ packages = [
 ]
 
 [tool.poetry.dependencies]
-python = "^3.6"
+python = "^3.8"
+pytest = "^6.2.2"
 
 [tool.poetry.dev-dependencies]
-wemake-python-styleguide = "^0.14.1"
-pytest = "^6.1.0"
-pytest-cov = "^2.11.1"
+wemake-python-styleguide = "^0.15.2"
 autopep8 = "^1.5.6"
 
-[tool.poetry.scripts]
-hexlet-python-package = "hexlet_python_package.scripts.hexlet_python_package:main"
-
 [build-system]
-requires = ["poetry>=0.12"]
-build-backend = "poetry.masonry.api"
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
