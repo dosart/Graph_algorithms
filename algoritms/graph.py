@@ -77,9 +77,18 @@ class Graph(object):
             GraphNotContainsVertexException: if vertex not contains in graph
         """
         if self.is_empty:
-            raise GraphIsEmptyException()
+            raise GraphIsEmptyException('Graph is empty')
         if from_vertex not in self._vertices:
             raise GraphNotContainsVertexException('{0} not found'.format(from_vertex))
         if to_vertex not in self._vertices:
             raise GraphNotContainsVertexException('{0} not found'.format(to_vertex))
         self._vertices[from_vertex].add_adjacent_vertex(to_vertex, weight)
+    
+
+    def __iter__(self):
+        """Return iterator by vertices.
+        
+        Returns:
+            iter (list iterator): iterator by vertices
+        """
+        return iter(self._vertices.values())
