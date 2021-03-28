@@ -82,7 +82,9 @@ class Graph(object):
             raise GraphNotContainsVertexException('{0} not found'.format(from_vertex))
         if to_vertex not in self._vertices:
             raise GraphNotContainsVertexException('{0} not found'.format(to_vertex))
-        self._vertices[from_vertex].add_adjacent_vertex(to_vertex, weight)
+
+        vertex = self._vertices[to_vertex]
+        self._vertices[from_vertex].add_adjacent_vertex(vertex, weight)
     
 
     def __iter__(self):

@@ -4,15 +4,24 @@
 class Vertex(object):
     """Class implements vertex for graph."""
 
-    def __init__(self, name):
+    def __init__(self, id):
         """
         Construct a new vertex for graph.
 
         Args:
             name: vertex id
         """
-        self._name = name
+        self._id = id
         self._adjacency_list = {}
+    
+    @property
+    def id(self):
+        """Return vertex's id.
+
+        Returns:
+            _id: unique id vertex in graph
+        """
+        return self._id
 
     @property
     def adjacency_list(self):
@@ -39,3 +48,11 @@ class Vertex(object):
             str (string): string representation of vertex
         """
         return str(self._name)
+    
+    def __iter__(self):
+        """Return iterator by adjacency list.
+        
+        Returns:
+            iter (list iterator): iterator by adjacency list
+        """
+        return iter(self._adjacency_list.keys())
