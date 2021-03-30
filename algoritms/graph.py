@@ -85,11 +85,10 @@ class Graph(object):
 
         vertex = self._vertices[to_vertex]
         self._vertices[from_vertex].add_adjacent_vertex(vertex, weight)
-    
 
     def __iter__(self):
         """Return iterator by vertices.
-        
+
         Returns:
             iter (list iterator): iterator by vertices
         """
