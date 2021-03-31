@@ -1,18 +1,14 @@
 """Implementation recursion depth-first search."""
 
+from algoritms.explore import explore
 
-def explore(vertex, visited):
-    """Find all vertices reachable from a arg.
 
-    Args:
-        vertex: start vertex for explore
-        visited (dict): key (vertex id), value (true if vetrex is visited)
-    """
-    visited[vertex.identifier] = True
+def pre_visit(vertex):
+    pass
 
-    for adjacent_vertex in vertex:
-        if visited[adjacent_vertex.identifier] is False:
-            explore(adjacent_vertex, visited)
+
+def post_visit(vertex):
+    pass
 
 
 def dfs_recursion(graph):
@@ -28,5 +24,5 @@ def dfs_recursion(graph):
 
     for vertex in graph:
         if visited[vertex.identifier] is False:
-            explore(vertex, visited)
+            explore(vertex, visited, pre_visit, post_visit)
     return visited
