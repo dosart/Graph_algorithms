@@ -22,3 +22,4 @@ def dfs_iterative(graph):
             if visited[adjacent_vertex] is False:
                   stack.append(adjacent_vertex)
                   visited[adjacent_vertex] == True
+    return visited
