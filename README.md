@@ -10,3 +10,5 @@ The project was made as part of the [Coding Interview University](https://github
 ## depth-first search (DFS)
 
 - [x] [recursive version of the algorithm](https://github.com/dosart/Graph_algorithms/blob/master/algoritms/dfs_recursion.py)
+- [x] [iterative version of the algorithm](https://github.com/dosart/Graph_algorithms/blob/master/algoritms/dfs/dfs_iterative.py)
+- [x] [algorithm counting connected components graph](https://github.com/dosart/Graph_algorithms/blob/master/algoritms/dfs/connected_components.py)
