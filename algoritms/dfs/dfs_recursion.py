@@ -1,13 +1,27 @@
 """Implementation recursion depth-first search."""
 
-from algoritms.explore import explore
+from algoritms.dfs.explore import explore
 
 
-def pre_visit(vertex):
+def _pre_visit(vertex):
+    """Doing nothing.
+
+       Function called in explore function
+
+       Args:
+            vertex: vertex of graph
+    """
     pass
 
 
-def post_visit(vertex):
+def _post_visit(vertex):
+    """Doing nothing.
+
+       Function called in explore function
+
+       Args:
+            vertex: vertex of graph
+    """
     pass
 
 
@@ -24,5 +38,5 @@ def dfs_recursion(graph):
 
     for vertex in graph:
         if visited[vertex.identifier] is False:
-            explore(vertex, visited, pre_visit, post_visit)
+            explore(vertex, visited, _pre_visit, _post_visit)
     return visited
