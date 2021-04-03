@@ -10,7 +10,7 @@ def dfs_iterative(graph):
     Returns:
         visited (dict): key (vertex id), value (true if vetrex is visited)
     """
-    visited = {vertex : False for vertex in graph}
+    visited = {vertex: False for vertex in graph}
 
     stack = []
     for vertex in graph:
@@ -18,8 +18,9 @@ def dfs_iterative(graph):
 
     while len(stack) > 0:
         vertex = stack.pop()
+        visited[vertex] = True
+
         for adjacent_vertex in vertex:
             if visited[adjacent_vertex] is False:
-                  stack.append(adjacent_vertex)
-                  visited[adjacent_vertex] == True
+                stack.append(adjacent_vertex)
     return visited
