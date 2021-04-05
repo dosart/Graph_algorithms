@@ -12,3 +12,6 @@ The project was made as part of the [Coding Interview University](https://github
 - [x] [recursive version of the algorithm](https://github.com/dosart/Graph_algorithms/blob/master/algoritms/dfs/dfs_recursion.py)
 - [x] [iterative version of the algorithm](https://github.com/dosart/Graph_algorithms/blob/master/algoritms/dfs/dfs_iterative.py)
 - [x] [algorithm counting connected components graph](https://github.com/dosart/Graph_algorithms/blob/master/algoritms/dfs/connected_components.py)
+- [x] [topological sort](https://github.com/dosart/Graph_algorithms/blob/master/algoritms/dfs/topological_sort.py)
+
+[topological sort](https://github.com/dosart/Graph_algorithms/blob/master/algoritms/topological_sort.py)
