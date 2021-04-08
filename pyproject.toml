@@ -6,7 +6,7 @@ authors = ["Denis <Dysprosium92@ya.ru>"]
 license = "MIT"
 readme = "README.md"
 packages = [
-    { include = "algoritms" },
+    { include = "algorithms" },
 ]
 
 [tool.poetry.dependencies]
