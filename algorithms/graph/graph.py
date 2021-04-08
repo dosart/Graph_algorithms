@@ -1,10 +1,10 @@
 """Graph data structure implementation."""
 
-from algoritms.vertex import Vertex
+from algorithms.vertex import Vertex
 
-from algoritms.exception.graph_exception import GraphContainsVertexExemption
-from algoritms.exception.graph_exception import GraphNotContainsVertexException
-from algoritms.exception.graph_exception import GraphIsEmptyException
+from algorithms.exception.graph_exception import GraphContainsVertexExemption
+from algorithms.exception.graph_exception import GraphNotContainsVertexException
+from algorithms.exception.graph_exception import GraphIsEmptyException
 
 
 class Graph(object):

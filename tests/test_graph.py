@@ -2,10 +2,10 @@
 
 import pytest
 
-from algoritms.graph import Graph
-from algoritms.exception.graph_exception import GraphContainsVertexExemption
-from algoritms.exception.graph_exception import GraphIsEmptyException
-from algoritms.exception.graph_exception import GraphNotContainsVertexException
+from algorithms.graph import Graph
+from algorithms.exception.graph_exception import GraphContainsVertexExemption
+from algorithms.exception.graph_exception import GraphIsEmptyException
+from algorithms.exception.graph_exception import GraphNotContainsVertexException
 
 
 def test_make_graph():
