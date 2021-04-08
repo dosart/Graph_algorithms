@@ -16,7 +16,7 @@ def dfs_iterative(graph):
     for vertex in graph:
         stack.append(vertex)
 
-    while len(stack) > 0:
+    while stack:
         vertex = stack.pop()
         visited[vertex] = True
 
