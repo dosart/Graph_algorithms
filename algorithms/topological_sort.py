@@ -2,8 +2,8 @@
 
 from collections import deque
 
-from algoritms.dfs.contains_circle import contains_circle
-from algoritms.exception.graph_exception import GraphContainsCircleException, sorting_not_possible_message
+from algorithms.dfs.contains_circle import contains_circle
+from algorithms.exception.graph_exception import GraphContainsCircleException, sorting_not_possible_message
 
 
 def _count_degrees(graph):

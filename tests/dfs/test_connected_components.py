@@ -2,8 +2,8 @@
 
 import pytest
 
-from algoritms.graph import Graph
-from algoritms.dfs.connected_components import connected_components
+from algorithms.graph.graph import Graph
+from algorithms.dfs.connected_components import connected_components
 
 
 def test_one_component():

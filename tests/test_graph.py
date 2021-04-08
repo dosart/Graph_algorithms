@@ -2,7 +2,7 @@
 
 import pytest
 
-from algorithms.graph import Graph
+from algorithms.graph.graph import Graph
 from algorithms.exception.graph_exception import GraphContainsVertexExemption
 from algorithms.exception.graph_exception import GraphIsEmptyException
 from algorithms.exception.graph_exception import GraphNotContainsVertexException

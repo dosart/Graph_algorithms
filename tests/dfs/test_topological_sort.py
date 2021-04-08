@@ -4,7 +4,7 @@ import pytest
 
 from algorithms.dfs.topological_sort import topological_sort as dfs_topological_sort
 from algorithms.topological_sort import topological_sort
-from algorithms.graph import Graph
+from algorithms.graph.graph import Graph
 
 
 def test_topological_sort1():

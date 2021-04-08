@@ -1,6 +1,6 @@
 """Graph data structure implementation."""
 
-from algorithms.vertex import Vertex
+from algorithms.graph.vertex import Vertex
 
 from algorithms.exception.graph_exception import GraphContainsVertexExemption
 from algorithms.exception.graph_exception import GraphNotContainsVertexException
