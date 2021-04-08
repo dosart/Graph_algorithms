@@ -2,13 +2,13 @@ install:
 	poetry install
 
 test:
-	poetry run pytest algoritms tests
+	poetry run pytest tests
 
 test-coverage:
-	poetry run pytest --cov=algoritms --cov-report xml tests
+	poetry run pytest --cov=algorithms --cov-report xml tests
 
 lint:
-	poetry run flake8 algoritms
+	poetry run flake8 algorithms
 
 selfcheck:
 	poetry check
