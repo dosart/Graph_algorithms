@@ -2,7 +2,7 @@ install:
 	poetry install
 
 test:
-	poetry run pytest tests
+	poetry run pytest tests/
 
 test-coverage:
 	poetry run pytest --cov=algorithms --cov-report xml tests
