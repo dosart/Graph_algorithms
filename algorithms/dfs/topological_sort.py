@@ -4,7 +4,8 @@
 from algorithms.dfs.dfs_recursion import dfs_recursion
 from algorithms.dfs.contains_circle import contains_circle
 
-from algorithms.exception.graph_exception import GraphContainsCircleException, sorting_not_possible_message
+from algorithms.exception.graph_exception import GraphContainsCircleException
+from algorithms.exception.messages import sorting_not_possible_message
 
 
 class _TopologicalSort(object):
