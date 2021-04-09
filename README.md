@@ -7,7 +7,7 @@
 The project was made as part of the [Coding Interview University](https://github.com/Ilyushin/google-interview-university) course.
 
 
-## depth-first search (DFS)
+## Depth-first search (DFS)
 
 - [x] [recursive version of the algorithm](https://github.com/dosart/Graph_algorithms/blob/master/algoritms/dfs/dfs_recursion.py)
 - [x] [iterative version of the algorithm](https://github.com/dosart/Graph_algorithms/blob/master/algoritms/dfs/dfs_iterative.py)
@@ -15,3 +15,7 @@ The project was made as part of the [Coding Interview University](https://github
 - [x] [topological sort](https://github.com/dosart/Graph_algorithms/blob/master/algoritms/dfs/topological_sort.py)
 
 [topological sort](https://github.com/dosart/Graph_algorithms/blob/master/algoritms/topological_sort.py)
+
+## Graph paths
+- [x] [iterative version breadth first search](https://github.com/dosart/Graph_algorithms/blob/master/algorithms/paths_in_graph/bfs/bfs.py)
+
