@@ -3,12 +3,14 @@
 import pytest
 
 from algorithms.graph.graph import Graph
+
 from algorithms.exception.graph_exception import GraphContainsVertexExemption
 from algorithms.exception.graph_exception import GraphIsEmptyException
 from algorithms.exception.graph_exception import GraphNotContainsVertexException
-from algorithms.exception.graph_exception import graph_contains_vertex_message
-from algorithms.exception.graph_exception import graph_is_empty_message
-from algorithms.exception.graph_exception import graph_not_contains_vertex_message
+
+from algorithms.exception.messages import graph_contains_vertex_message
+from algorithms.exception.messages import graph_is_empty_message
+from algorithms.exception.messages import graph_not_contains_vertex_message
 
 
 def test_make_graph():
