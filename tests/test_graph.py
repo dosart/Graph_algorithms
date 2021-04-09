@@ -6,6 +6,9 @@ from algorithms.graph.graph import Graph
 from algorithms.exception.graph_exception import GraphContainsVertexExemption
 from algorithms.exception.graph_exception import GraphIsEmptyException
 from algorithms.exception.graph_exception import GraphNotContainsVertexException
+from algorithms.exception.graph_exception import graph_contains_vertex_message
+from algorithms.exception.graph_exception import graph_is_empty_message
+from algorithms.exception.graph_exception import graph_not_contains_vertex_message
 
 
 def test_make_graph():
@@ -35,7 +38,7 @@ def test_add_vertex_second_time():
 
     with pytest.raises(GraphContainsVertexExemption) as exception_info:
         graph.create_vertex_by_id('A')
-    assert str(exception_info.value) == 'A contains in graph'
+    assert str(exception_info.value) == graph_contains_vertex_message('A')
 
 
 def test_add_edge_in_empty_graph():
@@ -43,7 +46,7 @@ def test_add_edge_in_empty_graph():
 
     with pytest.raises(GraphIsEmptyException) as exception_info:
         graph.add_edge('A', 'B')
-    assert str(exception_info.value) == 'Graph is empty'
+    assert str(exception_info.value) == graph_is_empty_message()
 
 
 def test_vertex_not_found1():
@@ -52,7 +55,7 @@ def test_vertex_not_found1():
 
     with pytest.raises(GraphNotContainsVertexException) as exception_info:
         graph.add_edge('A', 'B')
-    assert str(exception_info.value) == 'B not found'
+    assert str(exception_info.value) == graph_not_contains_vertex_message('B')
 
 
 def test_vertex_not_found2():
@@ -61,7 +64,7 @@ def test_vertex_not_found2():
 
     with pytest.raises(GraphNotContainsVertexException) as exception_info:
         graph.add_edge('A', 'B')
-    assert str(exception_info.value) == 'A not found'
+    assert str(exception_info.value) == graph_not_contains_vertex_message('A')
 
 
 def test_get_graph_iterator():
@@ -82,7 +85,7 @@ def test_contains_positive():
     graph.create_vertex_by_id('L')
     graph.create_vertex_by_id('M')
 
-    assert ('L' in graph) == True
+    assert True is ('L' in graph)
 
 
 def test_contains_negative():
@@ -92,4 +95,38 @@ def test_contains_negative():
     graph.create_vertex_by_id('L')
     graph.create_vertex_by_id('M')
 
-    assert ('F' in graph) == False
+    assert False is ('F' in graph)
+
+
+def test_get_vertex_by_id_positive():
+    graph = Graph()
+
+    graph.create_vertex_by_id('A')
+    graph.create_vertex_by_id('B')
+    graph.create_vertex_by_id('C')
+    length = len(graph)
+
+    vertex = graph.get_vertex_by_id('A')
+
+    assert vertex.identifier == 'A'
+    assert length == len(graph)
+
+
+def test_get_vertex_by_id_negative1():
+    graph = Graph()
+
+    graph.create_vertex_by_id('B')
+
+    with pytest.raises(GraphNotContainsVertexException) as exception_info:
+        vertex = graph.get_vertex_by_id('A')
+
+    assert str(exception_info.value) == graph_not_contains_vertex_message('A')
+
+
+def test_get_vertex_by_id_negative2():
+    graph = Graph()
+
+    with pytest.raises(GraphIsEmptyException) as exception_info:
+        vertex = graph.get_vertex_by_id('A')
+
+    assert str(exception_info.value) == graph_is_empty_message()
