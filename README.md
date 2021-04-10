@@ -7,6 +7,9 @@
 The project was made as part of the [Coding Interview University](https://github.com/Ilyushin/google-interview-university) course.
 
 
+[topological sort without using DFS](https://github.com/dosart/Graph_algorithms/blob/master/algoritms/topological_sort.py)
+
+
 ## Depth-first search (DFS)
 
 - [x] [recursive version of the algorithm](https://github.com/dosart/Graph_algorithms/blob/master/algoritms/dfs/dfs_recursion.py)
@@ -14,8 +17,7 @@ The project was made as part of the [Coding Interview University](https://github
 - [x] [algorithm counting connected components graph](https://github.com/dosart/Graph_algorithms/blob/master/algoritms/dfs/connected_components.py)
 - [x] [topological sort](https://github.com/dosart/Graph_algorithms/blob/master/algoritms/dfs/topological_sort.py)
 
-[topological sort](https://github.com/dosart/Graph_algorithms/blob/master/algoritms/topological_sort.py)
 
-## Graph paths
+## Paths in the graph
 - [x] [iterative version breadth first search](https://github.com/dosart/Graph_algorithms/blob/master/algorithms/paths_in_graph/bfs/bfs.py)
 
