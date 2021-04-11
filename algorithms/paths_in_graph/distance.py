@@ -7,6 +7,8 @@ The collection stores items:
 Doesn't check if a key is contained in a collection.
 """
 
+import sys
+
 
 def make_distances(graph):
     """Return collection.
@@ -42,6 +44,20 @@ def get_distance(vertex, distances):
         distance (int): distance to vertex
     """
     return distances[vertex.identifier]
+
+
+def to_int(distance):
+    """Convert None to sys.maxsize.
+
+    Args:
+        distance: distance for convert
+
+    Returns:
+        disatance: if disatance == None then return sys.maxsize else distance
+    """
+    if distance is None:
+        return sys.maxsize
+    return distance
 
 
 def not_visited(vertex, distances):
