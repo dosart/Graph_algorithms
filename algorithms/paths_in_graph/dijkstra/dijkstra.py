@@ -59,8 +59,16 @@ def _dijkstra(graph, start_vertex):
     while not is_empty(priority_queue):
         vertex = extract_min(priority_queue)
         for adjacent_vertex in vertex:
-            weight = to_int(get_distance(vertex, distance)) + vertex.edge_weight_to(adjacent_vertex)
-            if to_int(get_distance(adjacent_vertex, distance)) > weight:
+            weight = _edge_weight(vertex, adjacent_vertex, distance)
+            if _get_distance(adjacent_vertex, distance) > weight:
                 set_distance(adjacent_vertex, weight, distance)
                 decrease_priority(adjacent_vertex, weight, priority_queue)
     return distance
+
+
+def _edge_weight(vertex, adjacent_vertex, distance):
+    return to_int(get_distance(vertex, distance)) + vertex.edge_weight_to(adjacent_vertex)
+
+
+def _get_distance(vertex, distance):
+    return to_int(get_distance(vertex, distance))
