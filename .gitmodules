@@ -1,3 +1,0 @@
-[submodule "algorithms/paths_in_graph/priority_queue/heapdict"]
-	path = algorithms/paths_in_graph/priority_queue/heapdict
-	url = https://github.com/DanielStutzbach/heapdict.git
