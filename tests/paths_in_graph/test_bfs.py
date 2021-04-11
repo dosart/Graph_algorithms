@@ -11,7 +11,7 @@ from algorithms.exception.graph_exception import GraphIsEmptyException
 from algorithms.exception.messages import graph_is_empty_message
 
 
-def test_bfs_positive2():
+def test_bfs_positive1():
     graph = Graph()
 
     graph.create_vertex_by_id('A')
@@ -20,8 +20,27 @@ def test_bfs_positive2():
 
     assert distance['A'] == 0
 
+def test_bfs_positive2():
+    graph = Graph()
 
-def test_bfs_positive1():
+    graph.create_vertex_by_id('A')
+    graph.create_vertex_by_id('B')
+    graph.create_vertex_by_id('C')
+    graph.create_vertex_by_id('D')
+
+    graph.add_edge('A', 'B')
+    graph.add_edge('A', 'C')
+
+    distance = bfs(graph, graph.get_vertex_by_id('A'))
+
+    assert distance['A'] == 0
+    assert distance['B'] == 1
+    assert distance['C'] == 1
+
+    assert distance['D'] is None
+
+
+def test_bfs_positive3():
     graph = Graph()
 
     graph.create_vertex_by_id('A')
