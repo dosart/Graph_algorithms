@@ -41,6 +41,17 @@ class Vertex(object):
         """
         self._adjacency_list[vertex] = weight
 
+    def edge_weight_to(self, vertex):
+        """Return  edge weight to vertex.
+
+        Args:
+            vertex: edge from self to vertex
+
+        Returns:
+            weight (int) edge weight from self to vertex
+        """
+        return self._adjacency_list[vertex]
+
     def __str__(self):
         """Return string representation of vertex.
 
