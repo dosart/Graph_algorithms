@@ -1,3 +1,5 @@
+# -*- coding:utf-8 -*-
+
 """Implementation of the algorithm for calculating the components of graph connectivity."""
 
 from algorithms.dfs.explore import explore

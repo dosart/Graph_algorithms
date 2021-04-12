@@ -1,3 +1,5 @@
+# -*- coding:utf-8 -*-
+
 """Implementation topological sort using recursive algorithm DFS."""
 
 

@@ -1,3 +1,5 @@
+# -*- coding:utf-8 -*-
+
 """Implementation of a collection to store the distance from the starting vertex to the rest in the graph.
 
 The collection stores items:

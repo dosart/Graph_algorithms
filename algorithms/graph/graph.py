@@ -1,3 +1,5 @@
+# -*- coding:utf-8 -*-
+
 """Graph data structure implementation."""
 
 from algorithms.graph.vertex import Vertex

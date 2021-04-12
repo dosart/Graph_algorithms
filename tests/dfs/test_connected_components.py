@@ -1,3 +1,5 @@
+# -*- coding:utf-8 -*-
+
 """Tests of algorithm for calculating the components of graph connectivity."""
 
 import pytest

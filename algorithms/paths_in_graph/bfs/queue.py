@@ -1,3 +1,5 @@
+# -*- coding:utf-8 -*-
+
 """Implementation simple queue for breadth-first search.
 
 Private data structure. Only for BFS.

@@ -1,3 +1,5 @@
+# -*- coding:utf-8 -*-
+
 """Tests of graphs."""
 
 import pytest

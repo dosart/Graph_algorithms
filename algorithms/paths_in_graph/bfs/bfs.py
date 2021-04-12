@@ -1,3 +1,5 @@
+# -*- coding:utf-8 -*-
+
 """Implementation iterative breadth-first search."""
 
 from algorithms.exception.graph_exception import GraphIsEmptyException

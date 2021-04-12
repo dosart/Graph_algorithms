@@ -1,3 +1,5 @@
+# -*- coding:utf-8 -*-
+
 """Implementation topological sort don't using algorithm DFS."""
 
 from collections import deque

@@ -1,3 +1,5 @@
+# -*- coding:utf-8 -*-
+
 """Implementation recursion depth-first search."""
 
 from algorithms.dfs.explore import explore

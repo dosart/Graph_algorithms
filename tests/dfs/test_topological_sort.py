@@ -1,3 +1,5 @@
+# -*- coding:utf-8 -*-
+
 """Tests of  algorithm topological sort."""
 
 import pytest

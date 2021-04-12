@@ -1,3 +1,5 @@
+# -*- coding:utf-8 -*-
+
 """Implementation Dijkstra’s algorithm."""
 
 from algorithms.paths_in_graph.priority_queue.priority_queue import make_priority_queue

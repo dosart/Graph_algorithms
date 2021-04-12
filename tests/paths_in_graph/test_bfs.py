@@ -1,3 +1,5 @@
+# -*- coding:utf-8 -*-
+
 import pytest
 
 from algorithms.paths_in_graph.bfs.bfs import bfs

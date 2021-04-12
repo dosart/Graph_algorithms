@@ -1,3 +1,5 @@
+# -*- coding:utf-8 -*-
+
 """Implementation iterative depth-first search."""
 
 

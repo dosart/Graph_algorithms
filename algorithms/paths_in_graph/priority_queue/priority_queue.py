@@ -1,3 +1,5 @@
+# -*- coding:utf-8 -*-
+
 """Implementation priority queue.
 
 Private data structure. Only for search algorithms.

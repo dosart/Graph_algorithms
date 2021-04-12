@@ -1,3 +1,5 @@
+# -*- coding:utf-8 -*-
+
 """The implementation of the verification algorithm contains a cycle graph using DFS."""
 
 
