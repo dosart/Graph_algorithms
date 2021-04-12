@@ -9,22 +9,6 @@ from algorithms.exception.graph_exception import GraphContainsCircleException
 from algorithms.exception.messages import sorting_not_possible_message
 
 
-def _count_degrees(graph):
-    in_degree = {vertex: 0 for vertex in graph}
-    for vertex in graph:
-        for adjacent_vertex in vertex:
-            in_degree[adjacent_vertex] += 1
-    return in_degree
-
-
-def _get_sources(degrees):
-    return deque([vertex for vertex, degree in degrees.items() if degree == 0])
-
-
-def _get_source(sources):
-    return sources.popleft()
-
-
 def topological_sort(graph):
     """Return vertices in sorted_array.
 
@@ -54,3 +38,19 @@ def topological_sort(graph):
                 sources.append(adjacent_vertex)
 
     return sorted_array
+
+
+def _count_degrees(graph):
+    in_degree = {vertex: 0 for vertex in graph}
+    for vertex in graph:
+        for adjacent_vertex in vertex:
+            in_degree[adjacent_vertex] += 1
+    return in_degree
+
+
+def _get_sources(degrees):
+    return deque([vertex for vertex, degree in degrees.items() if degree == 0])
+
+
+def _get_source(sources):
+    return sources.popleft()
