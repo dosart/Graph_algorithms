@@ -6,8 +6,8 @@ from algorithms.paths_in_graph.bfs.bfs import bfs
 from algorithms.graph.graph import Graph
 from algorithms.graph.vertex import Vertex
 
-from algorithms.exception.graph_exception import GraphNotContainsVertexException
-from algorithms.exception.messages import graph_not_contains_vertex_message
+from algorithms.exception.graph_exception import NotContainsVertexException
+from algorithms.exception.messages import not_contains_vertex_message
 
 from algorithms.exception.graph_exception import GraphIsEmptyException
 from algorithms.exception.messages import graph_is_empty_message
@@ -95,7 +95,7 @@ def test_bfs_negative2():
 
     graph.create_vertex_by_id('A')
 
-    with pytest.raises(GraphNotContainsVertexException) as exception_info:
+    with pytest.raises(NotContainsVertexException) as exception_info:
         bfs(graph, Vertex('S'))
 
-    assert str(exception_info.value) == graph_not_contains_vertex_message('S')
+    assert str(exception_info.value) == not_contains_vertex_message('S')

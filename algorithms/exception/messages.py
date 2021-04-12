@@ -42,7 +42,7 @@ def graph_contains_vertex_message(vertex_id):
     return '{0} contains in graph'.format(vertex_id)
 
 
-def graph_not_contains_vertex_message(vertex_id):
+def not_contains_vertex_message(vertex_id):
     """Return message for GraphContainsVertexExemption.
 
     Args:
@@ -51,4 +51,4 @@ def graph_not_contains_vertex_message(vertex_id):
     Returns:
         message: (str) message for exception
     """
-    return '{0} not contains in graph'.format(vertex_id)
+    return '{0} not contains'.format(vertex_id)

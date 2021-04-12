@@ -2,6 +2,9 @@
 
 """Implementation of  vertex for graph."""
 
+from algorithms.exception.graph_exception import NotContainsVertexException
+from algorithms.exception.messages import not_contains_vertex_message
+
 
 class Vertex(object):
     """Class implements vertex for graph."""
@@ -52,6 +55,8 @@ class Vertex(object):
         Returns:
             weight (int) edge weight from self to vertex
         """
+        if vertex not in self._adjacency_list:
+            raise NotContainsVertexException(not_contains_vertex_message(vertex.identifier))
         return self._adjacency_list[vertex]
 
     def __str__(self):

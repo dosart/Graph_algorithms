@@ -9,8 +9,8 @@ from algorithms.paths_in_graph.dijkstra.dijkstra import dijkstra
 
 from algorithms.paths_in_graph.distance import get_distance
 
-from algorithms.exception.graph_exception import GraphNotContainsVertexException
-from algorithms.exception.messages import graph_not_contains_vertex_message
+from algorithms.exception.graph_exception import NotContainsVertexException
+from algorithms.exception.messages import not_contains_vertex_message
 
 from algorithms.exception.graph_exception import GraphIsEmptyException
 from algorithms.exception.messages import graph_is_empty_message
@@ -90,7 +90,7 @@ def test_dijkstra_negative2():
 
     graph.create_vertex_by_id('A')
 
-    with pytest.raises(GraphNotContainsVertexException) as exception_info:
+    with pytest.raises(NotContainsVertexException) as exception_info:
         dijkstra(graph, Vertex('B'))
 
-    assert str(exception_info.value) == graph_not_contains_vertex_message('B')
+    assert str(exception_info.value) == not_contains_vertex_message('B')

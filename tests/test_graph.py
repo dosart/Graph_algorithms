@@ -8,11 +8,11 @@ from algorithms.graph.graph import Graph
 
 from algorithms.exception.graph_exception import GraphContainsVertexExemption
 from algorithms.exception.graph_exception import GraphIsEmptyException
-from algorithms.exception.graph_exception import GraphNotContainsVertexException
+from algorithms.exception.graph_exception import NotContainsVertexException
 
 from algorithms.exception.messages import graph_contains_vertex_message
 from algorithms.exception.messages import graph_is_empty_message
-from algorithms.exception.messages import graph_not_contains_vertex_message
+from algorithms.exception.messages import not_contains_vertex_message
 
 
 def test_make_graph():
@@ -57,18 +57,18 @@ def test_vertex_not_found1():
     graph = Graph()
     graph.create_vertex_by_id('A')
 
-    with pytest.raises(GraphNotContainsVertexException) as exception_info:
+    with pytest.raises(NotContainsVertexException) as exception_info:
         graph.add_edge('A', 'B')
-    assert str(exception_info.value) == graph_not_contains_vertex_message('B')
+    assert str(exception_info.value) == not_contains_vertex_message('B')
 
 
 def test_vertex_not_found2():
     graph = Graph()
     graph.create_vertex_by_id('B')
 
-    with pytest.raises(GraphNotContainsVertexException) as exception_info:
+    with pytest.raises(NotContainsVertexException) as exception_info:
         graph.add_edge('A', 'B')
-    assert str(exception_info.value) == graph_not_contains_vertex_message('A')
+    assert str(exception_info.value) == not_contains_vertex_message('A')
 
 
 def test_get_graph_iterator():
@@ -121,10 +121,10 @@ def test_get_vertex_by_id_negative1():
 
     graph.create_vertex_by_id('B')
 
-    with pytest.raises(GraphNotContainsVertexException) as exception_info:
+    with pytest.raises(NotContainsVertexException) as exception_info:
         vertex = graph.get_vertex_by_id('A')
 
-    assert str(exception_info.value) == graph_not_contains_vertex_message('A')
+    assert str(exception_info.value) == not_contains_vertex_message('A')
 
 
 def test_get_vertex_by_id_negative2():
