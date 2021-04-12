@@ -28,6 +28,20 @@ class Vertex(object):
         """
         return self._identifier
 
+    def __contains__(self, other):
+        """Return  True if vertex contains in adjacency list.
+
+        Args:
+            other: vertex for search
+
+        Returns:
+            result (bool): True if vertex contains in adjacency list
+        """
+        for vertex in self._adjacency_list.keys():
+            if vertex.identifier == other.identifier:
+                return True
+        return False
+
     @property
     def adjacency_list(self):
         """Return  adjacency list of vertex.
@@ -58,7 +72,7 @@ class Vertex(object):
         Returns:
             weight (int) edge weight from self to vertex
         """
-        if vertex not in self._adjacency_list:
+        if vertex not in self:
             raise NotContainsVertexException(not_contains_vertex_message(vertex.identifier))
         return self._adjacency_list[vertex]
 

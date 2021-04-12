@@ -13,6 +13,7 @@ from algorithms.exception.graph_exception import NotContainsVertexException
 from algorithms.exception.messages import graph_contains_vertex_message
 from algorithms.exception.messages import graph_is_empty_message
 from algorithms.exception.messages import not_contains_vertex_message
+from algorithms.graph.vertex import Vertex
 
 
 def test_make_graph():
@@ -134,3 +135,27 @@ def test_get_vertex_by_id_negative2():
         vertex = graph.get_vertex_by_id('A')
 
     assert str(exception_info.value) == graph_is_empty_message()
+
+
+def test_edge_weight_to_nagative():
+    vertex_s = Vertex('S')
+    vertex_a = Vertex('A')
+    vertex_b = Vertex('B')
+
+    vertex_s.add_adjacent_vertex(vertex_a)
+
+    with pytest.raises(NotContainsVertexException) as exception_info:
+        weight = vertex_s.edge_weight_to(vertex_b)
+
+    assert str(exception_info.value) == not_contains_vertex_message('B')
+
+
+def test_edge_weight_to_positive():
+    vertex_s = Vertex('S')
+    vertex_a = Vertex('A')
+
+    vertex_s.add_adjacent_vertex(vertex_a, 5)
+
+    weight = vertex_s.edge_weight_to(vertex_a)
+
+    assert weight == 5
