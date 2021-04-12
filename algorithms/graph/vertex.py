@@ -52,6 +52,9 @@ class Vertex(object):
         Args:
             vertex: edge from self to vertex
 
+        Raises:
+             NotContainsVertexException: if vertex not contains in adjacency list
+
         Returns:
             weight (int) edge weight from self to vertex
         """

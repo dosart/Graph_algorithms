@@ -80,7 +80,7 @@ class Graph(object):
 
         Raises:
             GraphIsEmptyException: if graph is empty
-            GraphNotContainsVertexException: if graph not contains vertex
+            NotContainsVertexException: if graph not contains vertex
         """
         if self.is_empty:
             raise GraphIsEmptyException(graph_is_empty_message())
@@ -98,7 +98,7 @@ class Graph(object):
 
         Raises:
             GraphIsEmptyException: if graph is empty
-            GraphNotContainsVertexException: if vertex not contains in graph
+            NotContainsVertexException: if vertex not contains in graph
         """
         if self.is_empty:
             raise GraphIsEmptyException(graph_is_empty_message())
