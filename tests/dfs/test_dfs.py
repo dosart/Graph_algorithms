@@ -1,48 +1,89 @@
-# """Tests of  algorithm depth first search."""
+# -*- coding:utf-8 -*-
 
-# import pytest
+"""Tests of  algorithm depth first search."""
 
-# from algoritms.graph import Graph
-# from algoritms.dfs.dfs_recursion import dfs_recursion
-# from algoritms.dfs.dfs_iterative import dfs_iterative
+import pytest
 
-
-# @pytest.mark.parametrize("dfs", [dfs_recursion, dfs_iterative])
-# def test_all_vertex_visited1(dfs):
-#     graph = Graph()
-
-#     graph.create_vertex_by_id('A')
-#     graph.create_vertex_by_id('B')
-#     graph.create_vertex_by_id('C')
-#     graph.create_vertex_by_id('D')
-#     graph.create_vertex_by_id('E')
-
-#     # first component of connectivity
-#     graph.add_edge('A', 'B')
-#     graph.add_edge('B', 'C')
-#     graph.add_edge('C', 'A')
-
-#     # second component of connectivity
-#     graph.add_edge('D', 'E')
-
-#     # third component of connectivity
-#     graph.create_vertex_by_id('K')
-
-#     visited = dfs(graph)
-
-#     assert all(value == True for value in visited.values())
+from algorithms.graph.graph import Graph
+from algorithms.dfs.dfs_recursion import dfs_recursion
+from algorithms.dfs.dfs_iterative import dfs_iterative
 
 
-# @pytest.mark.parametrize("dfs", [dfs_recursion, dfs_iterative])
-# def test_all_vertex_visited2(dfs):
-#     graph = Graph()
+def test_all_vertex_visited_dfs_iterative1():
+    graph = Graph()
 
-#     graph.create_vertex_by_id('A')
-#     graph.create_vertex_by_id('B')
-#     graph.create_vertex_by_id('C')
-#     graph.create_vertex_by_id('D')
-#     graph.create_vertex_by_id('E')
+    graph.create_vertex_by_id('A')
+    graph.create_vertex_by_id('B')
+    graph.create_vertex_by_id('C')
+    graph.create_vertex_by_id('D')
+    graph.create_vertex_by_id('E')
 
-#     visited = dfs(graph)
+    # first component of connectivity
+    graph.add_edge('A', 'B')
+    graph.add_edge('B', 'C')
+    graph.add_edge('C', 'A')
 
-#     assert all(value == True for value in visited.values())
+    # second component of connectivity
+    graph.add_edge('D', 'E')
+
+    # third component of connectivity
+    graph.create_vertex_by_id('K')
+
+    visited = dfs_iterative(graph)
+
+    assert all(value == True for value in visited.values())
+
+
+def test_all_vertex_visited_dfs_iterative2():
+    graph = Graph()
+
+    graph.create_vertex_by_id('A')
+    graph.create_vertex_by_id('B')
+    graph.create_vertex_by_id('C')
+    graph.create_vertex_by_id('D')
+    graph.create_vertex_by_id('E')
+
+    visited = dfs_iterative(graph)
+
+    assert all(value == True for value in visited.values())
+
+
+def pre_visit(vertex):
+    pass
+
+
+def post_visit(vertex):
+    pass
+
+
+def test_all_vertex_visited_dfs_recursion1():
+    graph = Graph()
+
+    graph.create_vertex_by_id('A')
+    graph.create_vertex_by_id('B')
+    graph.create_vertex_by_id('C')
+
+    graph.add_edge('A', 'B')
+    graph.add_edge('A', 'C')
+    graph.add_edge('C', 'C')
+
+    visited = dfs_recursion(graph, pre_visit, post_visit)
+
+    assert all(value == True for value in visited.values())
+
+
+def test_all_vertex_visited_dfs_recursion2():
+    graph = Graph()
+
+    graph.create_vertex_by_id('A')
+    graph.create_vertex_by_id('B')
+    graph.create_vertex_by_id('C')
+    graph.create_vertex_by_id('D')
+
+    graph.add_edge('A', 'C')
+    graph.add_edge('A', 'B')
+    graph.add_edge('B', 'C')
+
+    visited = dfs_recursion(graph, pre_visit, post_visit)
+
+    assert all(value == True for value in visited.values())
