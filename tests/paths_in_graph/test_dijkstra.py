@@ -40,17 +40,17 @@ def test_dijkstra_positive1():
 
     distance = dijkstra(graph, graph.get_vertex_by_id('A'))
 
-    distance_to_C = get_distance(graph.get_vertex_by_id('C'), distance)
-    assert distance_to_C == 2
+    distance_to_c = get_distance(graph.get_vertex_by_id('C'), distance)
+    assert distance_to_c == 2
 
-    distance_to_B = get_distance(graph.get_vertex_by_id('B'), distance)
-    assert distance_to_B == 3
+    distance_to_b = get_distance(graph.get_vertex_by_id('B'), distance)
+    assert distance_to_b == 3
 
-    distance_to_E = get_distance(graph.get_vertex_by_id('E'), distance)
-    assert distance_to_E == 6
+    distance_to_e = get_distance(graph.get_vertex_by_id('E'), distance)
+    assert distance_to_e == 6
 
-    distance_to_D = get_distance(graph.get_vertex_by_id('D'), distance)
-    assert distance_to_D == 5
+    distance_to_d = get_distance(graph.get_vertex_by_id('D'), distance)
+    assert distance_to_d == 5
 
 
 def test_dijkstra_positive2():
