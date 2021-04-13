@@ -1,5 +1,4 @@
 # -*- coding:utf-8 -*-
-
 """Graph data structure implementation."""
 
 from algorithms.graph.vertex import Vertex
@@ -10,6 +9,7 @@ from algorithms.exception.graph_exception import GraphIsEmptyException
 from algorithms.exception.messages import graph_is_empty_message
 from algorithms.exception.messages import not_contains_vertex_message
 from algorithms.exception.messages import graph_contains_vertex_message
+from algorithms.graph.edge import Edge
 
 
 class Graph(object):
@@ -18,6 +18,7 @@ class Graph(object):
     def __init__(self):
         """Construct a new graph data structure."""
         self._vertices = {}
+        self._edges = []
 
     def __contains__(self, vertex_id):
         """Return true if vertex_id contains in graph.
@@ -107,8 +108,22 @@ class Graph(object):
         if to_vertex not in self._vertices:
             raise NotContainsVertexException(not_contains_vertex_message(to_vertex))
 
-        vertex = self._vertices[to_vertex]
-        self._vertices[from_vertex].add_adjacent_vertex(vertex, weight)
+        first_vertex = self._vertices[from_vertex]
+        second_vertex = self._vertices[to_vertex]
+
+        first_vertex.add_adjacent_vertex(second_vertex, weight)
+
+        edge = Edge(first_vertex.identifier, second_vertex.identifier, weight)
+        self._edges.append(edge)
+
+    @property
+    def edges(self):
+        """Return list of graph's edges.
+
+        Returns:
+            edges (list of items' class Edge)
+        """
+        return self._edges
 
     def __iter__(self):
         """Return iterator by vertices.

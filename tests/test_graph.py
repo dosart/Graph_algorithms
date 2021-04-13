@@ -159,3 +159,34 @@ def test_edge_weight_to_positive():
     weight = vertex_s.edge_weight_to(vertex_a)
 
     assert weight == 5
+
+
+def test_edges():
+    graph = Graph()
+
+    graph.create_vertex_by_id('A')
+    graph.create_vertex_by_id('B')
+    graph.create_vertex_by_id('C')
+
+    graph.add_edge('A', 'B', 10)
+    graph.add_edge('A', 'C', 20)
+    graph.add_edge('B', 'C', 20)
+
+    edges = graph.edges
+
+    assert len(edges) == 3
+
+    first = edges[0]
+    assert first.first == 'A'
+    assert first.second == 'B'
+    assert first.weight == 10
+
+    second = edges[1]
+    assert second.first == 'A'
+    assert second.second == 'C'
+    assert second.weight == 20
+
+    third = edges[2]
+    assert third.first == 'B'
+    assert third.second == 'C'
+    assert third.weight == 20
