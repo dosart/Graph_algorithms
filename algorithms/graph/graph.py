@@ -40,7 +40,7 @@ class Graph(object):
 
     @property
     def size(self):
-        """Return size of graph.
+        """Return number of vertices of graph.
 
         Returns:
             size (int): size of grapg
@@ -49,7 +49,7 @@ class Graph(object):
 
     @property
     def is_empty(self):
-        """Return true if graph is empty.
+        """Return true if graph is empty (number of vertices == 0).
 
         Returns:
             result (bool): true if graph is empty else false
