@@ -21,3 +21,4 @@ The project was made as part of the [Coding Interview University](https://github
 ## Paths in the graph
 - [x] [iterative version breadth first search](https://github.com/dosart/Graph_algorithms/blob/master/algorithms/paths_in_graph/bfs/bfs.py)
 - [x] [Dijkstra's algorithm](https://github.com/dosart/Graph_algorithms/blob/master/algorithms/paths_in_graph/dijkstra/dijkstra.py)
+- [x] [Bellman-Ford’s algorithm] (https://github.com/dosart/Graph_algorithms/blob/master/algorithms/paths_in_graph/bellman_ford/bellman_ford.py)
