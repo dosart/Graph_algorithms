@@ -37,6 +37,8 @@ def set_distance(vertex, distance, distances):
 
 def get_distance(vertex, distances):
     """Return distance to vertex.
+    
+    Doesn't check contains element in collection
 
     Args:
         vertex: vertex to get distance
