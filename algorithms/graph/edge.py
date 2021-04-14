@@ -12,8 +12,8 @@ class Edge(object):
             second_vertex: second vertex id of edge
             weight (int): weight (cost) of edge
         """
-        self._first_vertex_id = first_vertex
-        self._second_vertex_id = second_vertex
+        self._first_vertex = first_vertex
+        self._second_vertex = second_vertex
         self._weight = weight
 
     @property
@@ -23,7 +23,7 @@ class Edge(object):
         Returns:
             first: first vertex id of edge
         """
-        return self._first_vertex_id
+        return self._first_vertex
 
     @property
     def second(self):
@@ -32,7 +32,7 @@ class Edge(object):
         Returns:
             second : second vertex id of edge
         """
-        return self._second_vertex_id
+        return self._second_vertex
 
     @property
     def weight(self):

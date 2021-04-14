@@ -113,7 +113,7 @@ class Graph(object):
 
         first_vertex.add_adjacent_vertex(second_vertex, weight)
 
-        edge = Edge(first_vertex.identifier, second_vertex.identifier, weight)
+        edge = Edge(first_vertex, second_vertex, weight)
         self._edges.append(edge)
 
     @property

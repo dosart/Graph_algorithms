@@ -177,16 +177,16 @@ def test_edges():
     assert len(edges) == 3
 
     first = edges[0]
-    assert first.first == 'A'
-    assert first.second == 'B'
+    assert first.first.identifier == 'A'
+    assert first.second.identifier == 'B'
     assert first.weight == 10
 
     second = edges[1]
-    assert second.first == 'A'
-    assert second.second == 'C'
+    assert second.first.identifier == 'A'
+    assert second.second.identifier == 'C'
     assert second.weight == 20
 
     third = edges[2]
-    assert third.first == 'B'
-    assert third.second == 'C'
+    assert third.first.identifier == 'B'
+    assert third.second.identifier == 'C'
     assert third.weight == 20

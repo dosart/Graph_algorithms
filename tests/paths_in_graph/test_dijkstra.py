@@ -6,6 +6,7 @@ from algorithms.graph.graph import Graph
 from algorithms.graph.vertex import Vertex
 
 from algorithms.paths_in_graph.dijkstra.dijkstra import dijkstra
+from algorithms.paths_in_graph.bellman_ford.bellman_ford import bellman_ford
 
 from algorithms.paths_in_graph.distance import get_distance
 
@@ -16,7 +17,8 @@ from algorithms.exception.graph_exception import GraphIsEmptyException
 from algorithms.exception.messages import graph_is_empty_message
 
 
-def test_dijkstra_positive1():
+@pytest.mark.parametrize("f", [dijkstra, bellman_ford])
+def test_positive1(f):
     graph = Graph()
 
     graph.create_vertex_by_id('A')
@@ -38,7 +40,7 @@ def test_dijkstra_positive1():
 
     graph.add_edge('E', 'D', 1)
 
-    distance = dijkstra(graph, graph.get_vertex_by_id('A'))
+    distance = f(graph, graph.get_vertex_by_id('A'))
 
     distance_to_c = get_distance(graph.get_vertex_by_id('C'), distance)
     assert distance_to_c == 2
@@ -52,8 +54,8 @@ def test_dijkstra_positive1():
     distance_to_d = get_distance(graph.get_vertex_by_id('D'), distance)
     assert distance_to_d == 5
 
-
-def test_dijkstra_positive2():
+@pytest.mark.parametrize("f", [dijkstra, bellman_ford])
+def test_dijkstra_positive2(f):
     graph = Graph()
 
     graph.create_vertex_by_id('A')
@@ -64,33 +66,34 @@ def test_dijkstra_positive2():
     graph.add_edge('A', 'C', 2)
     graph.add_edge('A', 'B', 4)
 
-    distance = dijkstra(graph, graph.get_vertex_by_id('A'))
+    distance = f(graph, graph.get_vertex_by_id('A'))
 
-    distance_to_B = get_distance(graph.get_vertex_by_id('B'), distance)
-    assert distance_to_B == 4
+    distance_to_b = get_distance(graph.get_vertex_by_id('B'), distance)
+    assert distance_to_b == 4
 
-    distance_to_C = get_distance(graph.get_vertex_by_id('C'), distance)
-    assert distance_to_C == 2
+    distance_to_c = get_distance(graph.get_vertex_by_id('C'), distance)
+    assert distance_to_c == 2
 
-    distance_to_D = get_distance(graph.get_vertex_by_id('D'), distance)
-    assert distance_to_D is None
+    distance_to_d = get_distance(graph.get_vertex_by_id('D'), distance)
+    assert distance_to_d is None
 
 
-def test_dijkstra_negative1():
+@pytest.mark.parametrize("f", [dijkstra, bellman_ford])
+def test_dijkstra_negative1(f):
     graph = Graph()
 
     with pytest.raises(GraphIsEmptyException) as exception_info:
-        dijkstra(graph, Vertex('A'))
+        f(graph, Vertex('A'))
 
     assert str(exception_info.value) == graph_is_empty_message()
 
-
-def test_dijkstra_negative2():
+@pytest.mark.parametrize("f", [dijkstra, bellman_ford])
+def test_dijkstra_negative2(f):
     graph = Graph()
 
     graph.create_vertex_by_id('A')
 
     with pytest.raises(NotContainsVertexException) as exception_info:
-        dijkstra(graph, Vertex('B'))
+        f(graph, Vertex('B'))
 
     assert str(exception_info.value) == not_contains_vertex_message('B')
