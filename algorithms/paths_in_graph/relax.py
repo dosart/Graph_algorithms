@@ -26,10 +26,6 @@ def relax(first_vertex, second_vertex, distance):
     return False
 
 
-def _get_distance(first_vertex, second_vertex):
-    return number(get_distance(first_vertex, distance))
-
-
 def edge_weight(first_vertex, second_vertex, distance):
     """Return weight of edge.
 
@@ -42,3 +38,7 @@ def edge_weight(first_vertex, second_vertex, distance):
         weight (int): weight of edge
     """
     return number(get_distance(first_vertex, distance)) + first_vertex.edge_weight_to(second_vertex)
+
+
+def _get_distance(first_vertex, second_vertex):
+    return number(get_distance(first_vertex, distance))
