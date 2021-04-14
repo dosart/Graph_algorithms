@@ -26,19 +26,19 @@ def relax(first_vertex, second_vertex, distance):
     return False
 
 
-def _get_distance(vertex, distance):
-    return number(get_distance(vertex, distance))
+def _get_distance(first_vertex, second_vertex):
+    return number(get_distance(first_vertex, distance))
 
 
-def edge_weight(vertex, adjacent_vertex, distance):
+def edge_weight(first_vertex, second_vertex, distance):
     """Return weight of edge.
 
     Args:
-        vertex: first vertex of edge
-        adjacent_vertex: second vertex of edge
+        first_vertex: first vertex of edge
+        second_vertex: second vertex of edge
         distance: data structure for distances of vertices graph
 
     Returns:
         weight (int): weight of edge
     """
-    return number(get_distance(vertex, distance)) + vertex.edge_weight_to(adjacent_vertex)
+    return number(get_distance(first_vertex, distance)) + first_vertex.edge_weight_to(second_vertex)
