@@ -50,7 +50,7 @@ def get_distance(vertex, distances):
     return distances[vertex.identifier]
 
 
-def to_int(distance):
+def number(distance):
     """Convert None to sys.maxsize.
 
     Args:

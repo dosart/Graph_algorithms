@@ -9,9 +9,9 @@ from algorithms.paths_in_graph.priority_queue.priority_queue import decrease_pri
 from algorithms.paths_in_graph.priority_queue.priority_queue import is_empty
 
 from algorithms.paths_in_graph.distance import make_distances
-from algorithms.paths_in_graph.distance import get_distance
 from algorithms.paths_in_graph.distance import set_distance
-from algorithms.paths_in_graph.distance import to_int
+from algorithms.paths_in_graph.relax import relax
+from algorithms.paths_in_graph.relax import edge_weight
 
 from algorithms.exception.graph_exception import NotContainsVertexException
 from algorithms.exception.messages import not_contains_vertex_message
@@ -61,16 +61,7 @@ def _dijkstra(graph, start_vertex):
     while not is_empty(priority_queue):
         vertex = extract_min(priority_queue)
         for adjacent_vertex in vertex:
-            weight = _edge_weight(vertex, adjacent_vertex, distance)
-            if _get_distance(adjacent_vertex, distance) > weight:
-                set_distance(adjacent_vertex, weight, distance)
+            if relax(vertex, adjacent_vertex, distance):
+                weight = edge_weight(vertex, adjacent_vertex, distance)
                 decrease_priority(adjacent_vertex, weight, priority_queue)
     return distance
-
-
-def _edge_weight(vertex, adjacent_vertex, distance):
-    return to_int(get_distance(vertex, distance)) + vertex.edge_weight_to(adjacent_vertex)
-
-
-def _get_distance(vertex, distance):
-    return to_int(get_distance(vertex, distance))
