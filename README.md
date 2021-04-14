@@ -12,10 +12,10 @@ The project was made as part of the [Coding Interview University](https://github
 
 ## Depth-first search (DFS)
 
-- [x] [recursive version of the algorithm](https://github.com/dosart/Graph_algorithms/blob/master/algoritms/dfs/dfs_recursion.py)
-- [x] [iterative version of the algorithm](https://github.com/dosart/Graph_algorithms/blob/master/algoritms/dfs/dfs_iterative.py)
-- [x] [algorithm counting connected components graph](https://github.com/dosart/Graph_algorithms/blob/master/algoritms/dfs/connected_components.py)
-- [x] [topological sort](https://github.com/dosart/Graph_algorithms/blob/master/algoritms/dfs/topological_sort.py)
+- [x] [recursive version of the algorithm](https://github.com/dosart/Graph_algorithms/blob/master/algorithms/dfs/dfs_recursion.py)
+- [x] [iterative version of the algorithm](https://github.com/dosart/Graph_algorithms/blob/master/algorithms/dfs/dfs_iterative.py)
+- [x] [algorithm counting connected components graph](https://github.com/dosart/Graph_algorithms/blob/master/algorithms/dfs/connected_components.py)
+- [x] [topological sort](https://github.com/dosart/Graph_algorithms/blob/master/algorithms/dfs/topological_sort.py)
 
 
 ## Paths in the graph
