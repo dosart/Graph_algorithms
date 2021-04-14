@@ -40,5 +40,5 @@ def edge_weight(first_vertex, second_vertex, distance):
     return number(get_distance(first_vertex, distance)) + first_vertex.edge_weight_to(second_vertex)
 
 
-def _get_distance(first_vertex, second_vertex):
-    return number(get_distance(first_vertex, distance))
+def _get_distance(vertex, distance):
+    return number(get_distance(vertex, distance))
