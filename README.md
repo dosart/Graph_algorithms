@@ -7,7 +7,7 @@
 The project was made as part of the [Coding Interview University](https://github.com/Ilyushin/google-interview-university) course.
 
 
-[topological sort without using DFS](https://github.com/dosart/Graph_algorithms/blob/master/algoritms/topological_sort.py)
+[topological sort without using DFS](https://github.com/dosart/Graph_algorithms/blob/master/algorithms/topological_sort.py)
 
 
 ## Depth-first search (DFS)
