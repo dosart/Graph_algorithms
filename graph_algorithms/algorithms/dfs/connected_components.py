@@ -2,7 +2,7 @@
 
 """Implementation of the algorithm for calculating the components of graph connectivity."""
 
-from graph_algorithms.dfs.explore import explore
+from graph_algorithms.algorithms.dfs.explore import explore
 
 
 class _ConnectedComponents(object):

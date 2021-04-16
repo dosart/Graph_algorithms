@@ -2,16 +2,16 @@
 
 """Implementation Dijkstra’s algorithm."""
 
-from graph_algorithms.paths_in_graph.priority_queue.priority_queue import make_priority_queue
-from graph_algorithms.paths_in_graph.priority_queue.priority_queue import extract_min
-from graph_algorithms.paths_in_graph.priority_queue.priority_queue import set_priority
-from graph_algorithms.paths_in_graph.priority_queue.priority_queue import decrease_priority
-from graph_algorithms.paths_in_graph.priority_queue.priority_queue import is_empty
+from graph_algorithms.data_structure.priority_queue.priority_queue import make_priority_queue
+from graph_algorithms.data_structure.priority_queue.priority_queue import extract_min
+from graph_algorithms.data_structure.priority_queue.priority_queue import set_priority
+from graph_algorithms.data_structure.priority_queue.priority_queue import decrease_priority
+from graph_algorithms.data_structure.priority_queue.priority_queue import is_empty
 
-from graph_algorithms.paths_in_graph.distance import make_distances
-from graph_algorithms.paths_in_graph.distance import set_distance
-from graph_algorithms.paths_in_graph.relax import relax
-from graph_algorithms.paths_in_graph.relax import edge_weight
+from graph_algorithms.data_structure.distance import make_distances
+from graph_algorithms.data_structure.distance import set_distance
+from graph_algorithms.algorithms.relax import relax
+from graph_algorithms.algorithms.relax import edge_weight
 
 from graph_algorithms.exception.graph_exception import NotContainsVertexException
 from graph_algorithms.exception.messages import not_contains_vertex_message

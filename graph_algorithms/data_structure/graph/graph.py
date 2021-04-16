@@ -1,7 +1,8 @@
 # -*- coding:utf-8 -*-
 """Graph data structure implementation."""
 
-from graph_algorithms.graph.vertex import Vertex
+from graph_algorithms.data_structure.graph.vertex import Vertex
+from graph_algorithms.data_structure.graph.edge import Edge
 
 from graph_algorithms.exception.graph_exception import GraphContainsVertexExemption
 from graph_algorithms.exception.graph_exception import NotContainsVertexException
@@ -9,7 +10,6 @@ from graph_algorithms.exception.graph_exception import GraphIsEmptyException
 from graph_algorithms.exception.messages import graph_is_empty_message
 from graph_algorithms.exception.messages import not_contains_vertex_message
 from graph_algorithms.exception.messages import graph_contains_vertex_message
-from graph_algorithms.graph.edge import Edge
 
 
 class Graph(object):

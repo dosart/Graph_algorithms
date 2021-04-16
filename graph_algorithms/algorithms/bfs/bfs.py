@@ -8,8 +8,8 @@ from graph_algorithms.exception.messages import graph_is_empty_message
 from graph_algorithms.exception.graph_exception import NotContainsVertexException
 from graph_algorithms.exception.messages import not_contains_vertex_message
 
-from graph_algorithms.paths_in_graph.bfs.queue import make_queue, enqueue, dequeue, is_empty
-from graph_algorithms.paths_in_graph.distance import get_distance, make_distances, not_visited, set_distance
+from graph_algorithms.algorithms.bfs.queue import make_queue, enqueue, dequeue, is_empty
+from graph_algorithms.data_structure.distance import get_distance, make_distances, not_visited, set_distance
 
 
 def bfs(graph, start_vertex):

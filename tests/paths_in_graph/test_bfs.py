@@ -2,15 +2,15 @@
 
 import pytest
 
-from algorithms.paths_in_graph.bfs.bfs import bfs
-from algorithms.graph.graph import Graph
-from algorithms.graph.vertex import Vertex
+from graph_algorithms.algorithms.bfs.bfs import bfs
+from graph_algorithms.data_structure.graph.graph import Graph
+from graph_algorithms.data_structure.graph.graph import Vertex
 
-from algorithms.exception.graph_exception import NotContainsVertexException
-from algorithms.exception.messages import not_contains_vertex_message
+from graph_algorithms.exception.graph_exception import NotContainsVertexException
+from graph_algorithms.exception.messages import not_contains_vertex_message
 
-from algorithms.exception.graph_exception import GraphIsEmptyException
-from algorithms.exception.messages import graph_is_empty_message
+from graph_algorithms.exception.graph_exception import GraphIsEmptyException
+from graph_algorithms.exception.messages import graph_is_empty_message
 
 
 def test_bfs_positive1():

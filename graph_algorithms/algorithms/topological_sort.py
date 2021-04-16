@@ -4,7 +4,7 @@
 
 from collections import deque
 
-from graph_algorithms.dfs.contains_circle import contains_circle
+from graph_algorithms.algorithms.dfs.contains_circle import contains_circle
 from graph_algorithms.exception.graph_exception import GraphContainsCircleException
 from graph_algorithms.exception.messages import sorting_not_possible_message
 

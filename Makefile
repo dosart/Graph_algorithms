@@ -5,10 +5,10 @@ test:
 	poetry run pytest tests/
 
 test-coverage:
-	poetry run pytest --cov=algorithms --cov-report xml tests
+	poetry run pytest --cov=graph_algorithms --cov-report xml tests
 
 lint:
-	poetry run flake8 algorithms
+	poetry run flake8 graph_algorithms
 
 selfcheck:
 	poetry check

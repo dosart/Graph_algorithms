@@ -2,19 +2,19 @@
 
 import pytest
 
-from algorithms.graph.graph import Graph
-from algorithms.graph.vertex import Vertex
+from graph_algorithms.data_structure.graph.graph import Graph
+from graph_algorithms.data_structure.graph.vertex import Vertex
 
-from algorithms.paths_in_graph.dijkstra.dijkstra import dijkstra
-from algorithms.paths_in_graph.bellman_ford.bellman_ford import bellman_ford
+from graph_algorithms.algorithms.dijkstra.dijkstra import dijkstra
+from graph_algorithms.algorithms.bellman_ford.bellman_ford import bellman_ford
 
-from algorithms.paths_in_graph.distance import get_distance
+from graph_algorithms.data_structure.distance import get_distance
 
-from algorithms.exception.graph_exception import NotContainsVertexException
-from algorithms.exception.messages import not_contains_vertex_message
+from graph_algorithms.exception.graph_exception import NotContainsVertexException
+from graph_algorithms.exception.messages import not_contains_vertex_message
 
-from algorithms.exception.graph_exception import GraphIsEmptyException
-from algorithms.exception.messages import graph_is_empty_message
+from graph_algorithms.exception.graph_exception import GraphIsEmptyException
+from graph_algorithms.exception.messages import graph_is_empty_message
 
 
 @pytest.mark.parametrize("f", [dijkstra, bellman_ford])

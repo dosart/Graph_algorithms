@@ -4,7 +4,7 @@
 
 The collection stores items:
     - key: vertex-identifier
-    - value: disatance
+    - value: distance
 
 Doesn't check if a key is contained in a collection.
 """
@@ -19,7 +19,7 @@ def make_distances(graph):
         graph: graph for construct collection
 
     Returns:
-        distance: collection (key:vertex-identifier, value:disatance)
+        distance: collection (key:vertex-identifier, value:distance)
     """
     return {vertex.identifier: None for vertex in graph}
 
@@ -57,7 +57,7 @@ def number(distance):
         distance: distance for convert
 
     Returns:
-        disatance: if disatance == None then return sys.maxsize else distance
+        distance: if distance == None then return sys.maxsize else distance
     """
     if distance is None:
         return sys.maxsize

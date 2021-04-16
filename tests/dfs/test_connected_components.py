@@ -4,8 +4,8 @@
 
 import pytest
 
-from algorithms.graph.graph import Graph
-from algorithms.dfs.connected_components import connected_components
+from graph_algorithms.data_structure.graph.graph import Graph
+from graph_algorithms.algorithms.dfs.connected_components import connected_components
 
 
 def test_one_component():

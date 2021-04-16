@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "graph algorithms"
-version = "0.5.1"
+version = "0.6.2"
 description = "graph algorithms implementation"
 authors = ["Denis <Dysprosium92@ya.ru>"]
 license = "MIT"

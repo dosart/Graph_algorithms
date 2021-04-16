@@ -3,9 +3,9 @@
 The function gets the edge (u, v) of the graph and and tries to improve the distance to v
 """
 
-from graph_algorithms.paths_in_graph.distance import get_distance
-from graph_algorithms.paths_in_graph.distance import set_distance
-from graph_algorithms.paths_in_graph.distance import number
+from graph_algorithms.data_structure.distance import get_distance
+from graph_algorithms.data_structure.distance import set_distance
+from graph_algorithms.data_structure.distance import number
 
 
 def relax(first_vertex, second_vertex, distance):

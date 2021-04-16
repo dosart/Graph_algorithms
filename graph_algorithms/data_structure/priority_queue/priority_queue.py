@@ -5,7 +5,7 @@
 Private data structure. Only for search algorithms.
 """
 
-from graph_algorithms.paths_in_graph.priority_queue.heapdict.heapdict import heapdict
+from graph_algorithms.data_structure.priority_queue.heapdict.heapdict import heapdict
 
 import sys
 

@@ -4,9 +4,9 @@
 
 import pytest
 
-from algorithms.graph.graph import Graph
-from algorithms.dfs.dfs_recursion import dfs_recursion
-from algorithms.dfs.dfs_iterative import dfs_iterative
+from graph_algorithms.data_structure.graph.graph import Graph
+from graph_algorithms.algorithms.dfs.dfs_recursion import dfs_recursion
+from graph_algorithms.algorithms.dfs.dfs_iterative import dfs_iterative
 
 
 def test_all_vertex_visited_dfs_iterative1():
