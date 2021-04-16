@@ -1,15 +1,15 @@
 """Implementation Bellman-Ford’s algorithm."""
 
-from algorithms.paths_in_graph.relax import relax
+from graph_algorithms.paths_in_graph.relax import relax
 
-from algorithms.paths_in_graph.distance import make_distances
-from algorithms.paths_in_graph.distance import set_distance
+from graph_algorithms.paths_in_graph.distance import make_distances
+from graph_algorithms.paths_in_graph.distance import set_distance
 
-from algorithms.exception.graph_exception import NotContainsVertexException
-from algorithms.exception.messages import not_contains_vertex_message
+from graph_algorithms.exception.graph_exception import NotContainsVertexException
+from graph_algorithms.exception.messages import not_contains_vertex_message
 
-from algorithms.exception.graph_exception import GraphIsEmptyException
-from algorithms.exception.messages import graph_is_empty_message
+from graph_algorithms.exception.graph_exception import GraphIsEmptyException
+from graph_algorithms.exception.messages import graph_is_empty_message
 
 
 def bellman_ford(graph, start_vertex):

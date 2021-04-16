@@ -2,7 +2,7 @@
 
 """Implementation recursion depth-first search."""
 
-from algorithms.dfs.explore import explore
+from graph_algorithms.dfs.explore import explore
 
 
 def dfs_recursion(graph, pre_visit, post_visit):

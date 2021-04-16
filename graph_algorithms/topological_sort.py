@@ -4,9 +4,9 @@
 
 from collections import deque
 
-from algorithms.dfs.contains_circle import contains_circle
-from algorithms.exception.graph_exception import GraphContainsCircleException
-from algorithms.exception.messages import sorting_not_possible_message
+from graph_algorithms.dfs.contains_circle import contains_circle
+from graph_algorithms.exception.graph_exception import GraphContainsCircleException
+from graph_algorithms.exception.messages import sorting_not_possible_message
 
 
 def topological_sort(graph):

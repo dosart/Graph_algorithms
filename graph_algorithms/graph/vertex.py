@@ -2,8 +2,8 @@
 
 """Implementation of  vertex for graph."""
 
-from algorithms.exception.graph_exception import NotContainsVertexException
-from algorithms.exception.messages import not_contains_vertex_message
+from graph_algorithms.exception.graph_exception import NotContainsVertexException
+from graph_algorithms.exception.messages import not_contains_vertex_message
 
 
 class Vertex(object):
