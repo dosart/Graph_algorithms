@@ -23,3 +23,10 @@ The project was made as part of the [Coding Interview University](https://github
 - [x] [Iterative version breadth first search](https://github.com/dosart/Graph_algorithms/blob/master/graph_algorithms/algorithms/bfs/bfs.py)
 - [x] [Dijkstra's algorithm](https://github.com/dosart/Graph_algorithms/blob/master/graph_algorithms/algorithms/dijkstra/dijkstra.py)
 - [x] [Bellman-Ford’s algorithm](https://github.com/dosart/Graph_algorithms/blob/master/graph_algorithms/algorithms/bellman_ford/bellman_ford.py)
+
+
+## Spanning tree
+- Kruskal's algorithm
+- Prim's algorithm
+- [x] [Disjointed set union (DSU](https://github.com/dosart/Graph_algorithms/blob/master/graph_algorithms/data_structure/disjointed_set_union/disjointed_set_union.py)
+  
