@@ -28,5 +28,5 @@ The project was made as part of the [Coding Interview University](https://github
 ## Spanning tree
 - Kruskal's algorithm
 - Prim's algorithm
-- [x] [Disjointed set union (DSU](https://github.com/dosart/Graph_algorithms/blob/master/graph_algorithms/data_structure/disjointed_set_union/disjointed_set_union.py)
+- [x] [Disjointed set union (DSU)](https://github.com/dosart/Graph_algorithms/blob/master/graph_algorithms/data_structure/disjointed_set_union/disjointed_set_union.py)
   
