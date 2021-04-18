@@ -51,4 +51,4 @@ def not_contains_vertex_message(vertex_id):
     Returns:
         message: (str) message for exception
     """
-    return '{0} not contains'.format(vertex_id)
+    return 'Does not contain element {0}'.format(vertex_id)
