@@ -9,8 +9,8 @@ class GraphContainsVertexExemption(Exception):
     pass  # noqa: WPS420, WPS604
 
 
-class GraphIsEmptyException(Exception):
-    """Exception class if a graph is empty."""
+class DataStructureIsEmptyException(Exception):
+    """Exception class if a data structure is empty."""
 
     pass  # noqa: WPS420, WPS604
 

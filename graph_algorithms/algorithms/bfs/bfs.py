@@ -2,8 +2,8 @@
 
 """Implementation iterative breadth-first search."""
 
-from graph_algorithms.exception.graph_exception import GraphIsEmptyException
-from graph_algorithms.exception.messages import graph_is_empty_message
+from graph_algorithms.exception.graph_exception import DataStructureIsEmptyException
+from graph_algorithms.exception.messages import data_structure_is_empty_message
 
 from graph_algorithms.exception.graph_exception import NotContainsElementException
 from graph_algorithms.exception.messages import not_contains_vertex_message
@@ -20,7 +20,7 @@ def bfs(graph, start_vertex):
         start_vertex: start vertex for search
 
     Raises:
-        GraphIsEmptyException: if graph is emoty
+        DataStructureIsEmptyException: if graph is emoty
         NotContainsElementException: if graph not contains start vertex
 
     Returns:
@@ -28,7 +28,7 @@ def bfs(graph, start_vertex):
 
     """
     if graph.is_empty:
-        raise GraphIsEmptyException(graph_is_empty_message())
+        raise DataStructureIsEmptyException(data_structure_is_empty_message())
     if start_vertex.identifier not in graph:
         raise NotContainsElementException(not_contains_vertex_message(start_vertex.identifier))
     return _bfs(graph, start_vertex)

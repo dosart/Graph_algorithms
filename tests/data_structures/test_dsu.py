@@ -1,13 +1,38 @@
 # -*- coding:utf-8 -*-
 
-"""Tests of disjoint-set-union."""
+"""Disjoint-set-union data structure tests."""
 
 import pytest
 
 from graph_algorithms.data_structure.disjointed_set_union.disjointed_set_union import DSU
 
+from graph_algorithms.exception.graph_exception import NotContainsElementException
+from graph_algorithms.exception.messages import not_contains_element_message
 
-def test_find():
+from graph_algorithms.exception.graph_exception import DataStructureIsEmptyException
+from graph_algorithms.exception.messages import data_structure_is_empty_message
+
+
+
+def test_find_negative1():
+    s = DSU()
+
+    s.make_set(1)
+
+    with pytest.raises(NotContainsElementException) as exception_info:
+        s.find(5)
+    assert str(exception_info.value) == not_contains_element_message()
+
+
+def test_find_negative2():
+    s = DSU()
+
+    with pytest.raises(DataStructureIsEmptyException) as exception_info:
+        s.find(11)
+    assert str(exception_info.value) == data_structure_is_empty_message()
+
+
+def test_find_positive():
     s = DSU()
 
     s.make_set(1)

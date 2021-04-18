@@ -7,11 +7,11 @@ import pytest
 from graph_algorithms.data_structure.graph.graph import Graph
 
 from graph_algorithms.exception.graph_exception import GraphContainsVertexExemption
-from graph_algorithms.exception.graph_exception import GraphIsEmptyException
+from graph_algorithms.exception.graph_exception import DataStructureIsEmptyException
 from graph_algorithms.exception.graph_exception import NotContainsElementException
 
 from graph_algorithms.exception.messages import graph_contains_vertex_message
-from graph_algorithms.exception.messages import graph_is_empty_message
+from graph_algorithms.exception.messages import data_structure_is_empty_message
 from graph_algorithms.exception.messages import not_contains_vertex_message
 
 
@@ -48,9 +48,9 @@ def test_add_vertex_second_time():
 def test_add_edge_in_empty_graph():
     graph = Graph()
 
-    with pytest.raises(GraphIsEmptyException) as exception_info:
+    with pytest.raises(DataStructureIsEmptyException) as exception_info:
         graph.add_edge('A', 'B')
-    assert str(exception_info.value) == graph_is_empty_message()
+    assert str(exception_info.value) == data_structure_is_empty_message()
 
 
 def test_vertex_not_found1():
@@ -130,7 +130,7 @@ def test_get_vertex_by_id_negative1():
 def test_get_vertex_by_id_negative2():
     graph = Graph()
 
-    with pytest.raises(GraphIsEmptyException) as exception_info:
+    with pytest.raises(DataStructureIsEmptyException) as exception_info:
         vertex = graph.get_vertex_by_id('A')
 
-    assert str(exception_info.value) == graph_is_empty_message()
+    assert str(exception_info.value) == data_structure_is_empty_message()

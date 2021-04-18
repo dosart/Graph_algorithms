@@ -1,5 +1,7 @@
 # -*- coding:utf-8 -*-
 
+"""Tests of algorithm  breadth-first search."""
+
 import pytest
 
 from graph_algorithms.algorithms.bfs.bfs import bfs
@@ -9,8 +11,8 @@ from graph_algorithms.data_structure.graph.graph import Vertex
 from graph_algorithms.exception.graph_exception import NotContainsElementException
 from graph_algorithms.exception.messages import not_contains_vertex_message
 
-from graph_algorithms.exception.graph_exception import GraphIsEmptyException
-from graph_algorithms.exception.messages import graph_is_empty_message
+from graph_algorithms.exception.graph_exception import DataStructureIsEmptyException
+from graph_algorithms.exception.messages import data_structure_is_empty_message
 
 
 def test_bfs_positive1():
@@ -21,6 +23,7 @@ def test_bfs_positive1():
     distance = bfs(graph, graph.get_vertex_by_id('A'))
 
     assert distance['A'] == 0
+
 
 def test_bfs_positive2():
     graph = Graph()
@@ -84,10 +87,10 @@ def test_bfs_positive3():
 def test_bfs_negative1():
     graph = Graph()
 
-    with pytest.raises(GraphIsEmptyException) as exception_info:
+    with pytest.raises(DataStructureIsEmptyException) as exception_info:
         bfs(graph, Vertex('S'))
 
-    assert str(exception_info.value) == graph_is_empty_message()
+    assert str(exception_info.value) == data_structure_is_empty_message()
 
 
 def test_bfs_negative2():

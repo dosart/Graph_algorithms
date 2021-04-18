@@ -6,8 +6,8 @@ from graph_algorithms.data_structure.graph.edge import Edge
 
 from graph_algorithms.exception.graph_exception import GraphContainsVertexExemption
 from graph_algorithms.exception.graph_exception import NotContainsElementException
-from graph_algorithms.exception.graph_exception import GraphIsEmptyException
-from graph_algorithms.exception.messages import graph_is_empty_message
+from graph_algorithms.exception.graph_exception import DataStructureIsEmptyException
+from graph_algorithms.exception.messages import data_structure_is_empty_message
 from graph_algorithms.exception.messages import not_contains_vertex_message
 from graph_algorithms.exception.messages import graph_contains_vertex_message
 
@@ -35,7 +35,7 @@ class Graph(object):
         """Return size of graph.
 
         Returns:
-            size (int): size of grapg
+            size (int): size of graph
         """
         return self.size
 
@@ -80,11 +80,11 @@ class Graph(object):
             vertex: vertex by id
 
         Raises:
-            GraphIsEmptyException: if graph is empty
+            DataStructureIsEmptyException: if graph is empty
             NotContainsElementException: if graph not contains vertex
         """
         if self.is_empty:
-            raise GraphIsEmptyException(graph_is_empty_message())
+            raise DataStructureIsEmptyException(data_structure_is_empty_message())
         if vertex_id not in self._vertices:
             raise NotContainsElementException(not_contains_vertex_message(vertex_id))
         return self._vertices[vertex_id]
@@ -98,11 +98,11 @@ class Graph(object):
             weight (int): weight of edge
 
         Raises:
-            GraphIsEmptyException: if graph is empty
+            DataStructureIsEmptyException: if graph is empty
             NotContainsElementException: if vertex not contains in graph
         """
         if self.is_empty:
-            raise GraphIsEmptyException(graph_is_empty_message())
+            raise DataStructureIsEmptyException(data_structure_is_empty_message())
         if from_vertex not in self._vertices:
             raise NotContainsElementException(not_contains_vertex_message(from_vertex))
         if to_vertex not in self._vertices:

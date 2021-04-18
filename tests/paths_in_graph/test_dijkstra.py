@@ -13,8 +13,8 @@ from graph_algorithms.data_structure.distance import get_distance
 from graph_algorithms.exception.graph_exception import NotContainsElementException
 from graph_algorithms.exception.messages import not_contains_vertex_message
 
-from graph_algorithms.exception.graph_exception import GraphIsEmptyException
-from graph_algorithms.exception.messages import graph_is_empty_message
+from graph_algorithms.exception.graph_exception import DataStructureIsEmptyException
+from graph_algorithms.exception.messages import data_structure_is_empty_message
 
 
 @pytest.mark.parametrize("f", [dijkstra, bellman_ford])
@@ -82,10 +82,10 @@ def test_dijkstra_positive2(f):
 def test_dijkstra_negative1(f):
     graph = Graph()
 
-    with pytest.raises(GraphIsEmptyException) as exception_info:
+    with pytest.raises(DataStructureIsEmptyException) as exception_info:
         f(graph, Vertex('A'))
 
-    assert str(exception_info.value) == graph_is_empty_message()
+    assert str(exception_info.value) == data_structure_is_empty_message()
 
 @pytest.mark.parametrize("f", [dijkstra, bellman_ford])
 def test_dijkstra_negative2(f):
