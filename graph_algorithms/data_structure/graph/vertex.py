@@ -30,7 +30,7 @@ class Vertex(object):
 
     @property
     def adjacency_list(self):
-        """Return  adjacency list of vertex.
+        """Return the name of adjacent vertices.
 
         Returns:
             list (list): adjacency list of vertex
