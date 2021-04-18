@@ -2,7 +2,7 @@
 
 """Implementation of  vertex for graph."""
 
-from graph_algorithms.exception.graph_exception import NotContainsVertexException
+from graph_algorithms.exception.graph_exception import NotContainsElementException
 from graph_algorithms.exception.messages import not_contains_vertex_message
 
 
@@ -53,15 +53,15 @@ class Vertex(object):
             vertex: edge from self to vertex
 
         Raises:
-             NotContainsVertexException: if vertex not contains in adjacency list
+             NotContainsElementException: if vertex not contains in adjacency list
 
         Returns:
             weight (int) edge weight from self to vertex
         """
         if vertex not in self:
-            raise NotContainsVertexException(not_contains_vertex_message(vertex.identifier))
+            raise NotContainsElementException(not_contains_vertex_message(vertex.identifier))
         return self._adjacency_list[vertex]
-    
+
     def __contains__(self, other):
         """Return  True if vertex contains in adjacency list.
 

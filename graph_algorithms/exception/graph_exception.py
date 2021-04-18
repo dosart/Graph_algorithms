@@ -15,7 +15,7 @@ class GraphIsEmptyException(Exception):
     pass  # noqa: WPS420, WPS604
 
 
-class NotContainsVertexException(Exception):
+class NotContainsElementException(Exception):
     """Exception class if a graph contains vertex."""
 
     pass  # noqa: WPS420, WPS604

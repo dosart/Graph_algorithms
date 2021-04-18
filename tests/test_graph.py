@@ -9,7 +9,7 @@ from graph_algorithms.data_structure.graph.vertex import Vertex
 
 from graph_algorithms.exception.graph_exception import GraphContainsVertexExemption
 from graph_algorithms.exception.graph_exception import GraphIsEmptyException
-from graph_algorithms.exception.graph_exception import NotContainsVertexException
+from graph_algorithms.exception.graph_exception import NotContainsElementException
 
 from graph_algorithms.exception.messages import graph_contains_vertex_message
 from graph_algorithms.exception.messages import graph_is_empty_message
@@ -58,7 +58,7 @@ def test_vertex_not_found1():
     graph = Graph()
     graph.create_vertex_by_id('A')
 
-    with pytest.raises(NotContainsVertexException) as exception_info:
+    with pytest.raises(NotContainsElementException) as exception_info:
         graph.add_edge('A', 'B')
     assert str(exception_info.value) == not_contains_vertex_message('B')
 
@@ -67,7 +67,7 @@ def test_vertex_not_found2():
     graph = Graph()
     graph.create_vertex_by_id('B')
 
-    with pytest.raises(NotContainsVertexException) as exception_info:
+    with pytest.raises(NotContainsElementException) as exception_info:
         graph.add_edge('A', 'B')
     assert str(exception_info.value) == not_contains_vertex_message('A')
 
@@ -122,7 +122,7 @@ def test_get_vertex_by_id_negative1():
 
     graph.create_vertex_by_id('B')
 
-    with pytest.raises(NotContainsVertexException) as exception_info:
+    with pytest.raises(NotContainsElementException) as exception_info:
         vertex = graph.get_vertex_by_id('A')
 
     assert str(exception_info.value) == not_contains_vertex_message('A')
@@ -144,7 +144,7 @@ def test_edge_weight_to_nagative():
 
     vertex_s.add_adjacent_vertex(vertex_a)
 
-    with pytest.raises(NotContainsVertexException) as exception_info:
+    with pytest.raises(NotContainsElementException) as exception_info:
         weight = vertex_s.edge_weight_to(vertex_b)
 
     assert str(exception_info.value) == not_contains_vertex_message('B')

@@ -5,7 +5,7 @@ from graph_algorithms.algorithms.relax import relax
 from graph_algorithms.data_structure.distance import make_distances
 from graph_algorithms.data_structure.distance import set_distance
 
-from graph_algorithms.exception.graph_exception import NotContainsVertexException
+from graph_algorithms.exception.graph_exception import NotContainsElementException
 from graph_algorithms.exception.messages import not_contains_vertex_message
 
 from graph_algorithms.exception.graph_exception import GraphIsEmptyException
@@ -21,7 +21,7 @@ def bellman_ford(graph, start_vertex):
 
     Raises:
         GraphIsEmptyException: if graph is empty
-        NotContainsVertexException: if graph not contains start vertex
+        NotContainsElementException: if graph not contains start vertex
 
     Returns:
         distances: collection storing the distance from the starting vertex to the rest
@@ -29,7 +29,7 @@ def bellman_ford(graph, start_vertex):
     if graph.is_empty:
         raise GraphIsEmptyException(graph_is_empty_message())
     if start_vertex.identifier not in graph:
-        raise NotContainsVertexException(not_contains_vertex_message(start_vertex.identifier))
+        raise NotContainsElementException(not_contains_vertex_message(start_vertex.identifier))
     return _bellman_ford(graph, start_vertex)
 
 

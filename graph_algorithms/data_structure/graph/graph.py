@@ -5,7 +5,7 @@ from graph_algorithms.data_structure.graph.vertex import Vertex
 from graph_algorithms.data_structure.graph.edge import Edge
 
 from graph_algorithms.exception.graph_exception import GraphContainsVertexExemption
-from graph_algorithms.exception.graph_exception import NotContainsVertexException
+from graph_algorithms.exception.graph_exception import NotContainsElementException
 from graph_algorithms.exception.graph_exception import GraphIsEmptyException
 from graph_algorithms.exception.messages import graph_is_empty_message
 from graph_algorithms.exception.messages import not_contains_vertex_message
@@ -81,12 +81,12 @@ class Graph(object):
 
         Raises:
             GraphIsEmptyException: if graph is empty
-            NotContainsVertexException: if graph not contains vertex
+            NotContainsElementException: if graph not contains vertex
         """
         if self.is_empty:
             raise GraphIsEmptyException(graph_is_empty_message())
         if vertex_id not in self._vertices:
-            raise NotContainsVertexException(not_contains_vertex_message(vertex_id))
+            raise NotContainsElementException(not_contains_vertex_message(vertex_id))
         return self._vertices[vertex_id]
 
     def add_edge(self, from_vertex, to_vertex, weight=0):
@@ -99,14 +99,14 @@ class Graph(object):
 
         Raises:
             GraphIsEmptyException: if graph is empty
-            NotContainsVertexException: if vertex not contains in graph
+            NotContainsElementException: if vertex not contains in graph
         """
         if self.is_empty:
             raise GraphIsEmptyException(graph_is_empty_message())
         if from_vertex not in self._vertices:
-            raise NotContainsVertexException(not_contains_vertex_message(from_vertex))
+            raise NotContainsElementException(not_contains_vertex_message(from_vertex))
         if to_vertex not in self._vertices:
-            raise NotContainsVertexException(not_contains_vertex_message(to_vertex))
+            raise NotContainsElementException(not_contains_vertex_message(to_vertex))
 
         first_vertex = self._vertices[from_vertex]
         second_vertex = self._vertices[to_vertex]

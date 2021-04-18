@@ -12,7 +12,7 @@ class DSU(object):
         self._set = {}
 
     def make_set(self, vertex):
-        """Cunstruct new singleton set.
+        """Construct new singleton set.
 
         Args:
             vertex: element of new set

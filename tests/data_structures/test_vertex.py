@@ -6,7 +6,7 @@ import pytest
 
 from graph_algorithms.data_structure.graph.vertex import Vertex
 
-from graph_algorithms.exception.graph_exception import NotContainsVertexException
+from graph_algorithms.exception.graph_exception import NotContainsElementException
 from graph_algorithms.exception.messages import not_contains_vertex_message
 
 
@@ -17,7 +17,7 @@ def test_edge_weight_to_negative():
 
     vertex_s.add_adjacent_vertex(vertex_a)
 
-    with pytest.raises(NotContainsVertexException) as exception_info:
+    with pytest.raises(NotContainsElementException) as exception_info:
         weight = vertex_s.edge_weight_to(vertex_b)
 
     assert str(exception_info.value) == not_contains_vertex_message('B')

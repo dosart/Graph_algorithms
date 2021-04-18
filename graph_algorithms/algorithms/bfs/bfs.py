@@ -5,7 +5,7 @@
 from graph_algorithms.exception.graph_exception import GraphIsEmptyException
 from graph_algorithms.exception.messages import graph_is_empty_message
 
-from graph_algorithms.exception.graph_exception import NotContainsVertexException
+from graph_algorithms.exception.graph_exception import NotContainsElementException
 from graph_algorithms.exception.messages import not_contains_vertex_message
 
 from graph_algorithms.algorithms.bfs.queue import make_queue, enqueue, dequeue, is_empty
@@ -21,7 +21,7 @@ def bfs(graph, start_vertex):
 
     Raises:
         GraphIsEmptyException: if graph is emoty
-        NotContainsVertexException: if graph not contains start vertex
+        NotContainsElementException: if graph not contains start vertex
 
     Returns:
         distances: collection storing the distance from the starting vertex to the rest
@@ -30,7 +30,7 @@ def bfs(graph, start_vertex):
     if graph.is_empty:
         raise GraphIsEmptyException(graph_is_empty_message())
     if start_vertex.identifier not in graph:
-        raise NotContainsVertexException(not_contains_vertex_message(start_vertex.identifier))
+        raise NotContainsElementException(not_contains_vertex_message(start_vertex.identifier))
     return _bfs(graph, start_vertex)
 
 

@@ -10,7 +10,7 @@ from graph_algorithms.algorithms.bellman_ford.bellman_ford import bellman_ford
 
 from graph_algorithms.data_structure.distance import get_distance
 
-from graph_algorithms.exception.graph_exception import NotContainsVertexException
+from graph_algorithms.exception.graph_exception import NotContainsElementException
 from graph_algorithms.exception.messages import not_contains_vertex_message
 
 from graph_algorithms.exception.graph_exception import GraphIsEmptyException
@@ -93,7 +93,7 @@ def test_dijkstra_negative2(f):
 
     graph.create_vertex_by_id('A')
 
-    with pytest.raises(NotContainsVertexException) as exception_info:
+    with pytest.raises(NotContainsElementException) as exception_info:
         f(graph, Vertex('B'))
 
     assert str(exception_info.value) == not_contains_vertex_message('B')
