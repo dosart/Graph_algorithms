@@ -1,5 +1,7 @@
 # -*- coding:utf-8 -*-
 
+"""Tests of Dijkstra's algorithm."""
+
 import pytest
 
 from graph_algorithms.data_structure.graph.graph import Graph
@@ -54,6 +56,7 @@ def test_positive1(f):
     distance_to_d = get_distance(graph.get_vertex_by_id('D'), distance)
     assert distance_to_d == 5
 
+
 @pytest.mark.parametrize("f", [dijkstra, bellman_ford])
 def test_dijkstra_positive2(f):
     graph = Graph()
@@ -86,6 +89,7 @@ def test_dijkstra_negative1(f):
         f(graph, Vertex('A'))
 
     assert str(exception_info.value) == data_structure_is_empty_message()
+
 
 @pytest.mark.parametrize("f", [dijkstra, bellman_ford])
 def test_dijkstra_negative2(f):
