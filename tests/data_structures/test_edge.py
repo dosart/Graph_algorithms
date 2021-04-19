@@ -34,3 +34,26 @@ def test_edges():
     assert third.first.identifier == 'B'
     assert third.second.identifier == 'C'
     assert third.weight == 20
+
+
+def test_sorted_edges():
+    graph = Graph()
+
+    graph.create_vertex_by_id('A')
+    graph.create_vertex_by_id('B')
+    graph.create_vertex_by_id('C')
+
+    graph.add_edge('A', 'B', 15)
+    graph.add_edge('A', 'C', 10)
+    graph.add_edge('B', 'C', 20)
+
+    edges = graph.get_sorted_edges_by(lambda edge: edge.weight)
+
+    first = edges[0]
+    assert first.weight == 10
+
+    second = edges[1]
+    assert second.weight == 15
+
+    third = edges[2]
+    assert third.weight == 20
