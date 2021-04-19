@@ -125,6 +125,17 @@ class Graph(object):
         """
         return self._edges
 
+    def get_sorted_edges_by(self, cmp):
+        """Return sorted edges.
+
+        Args:
+            cmp: comparison function
+
+        Returns:
+            sorted (list): sorted list of edges
+        """
+        return sorted(self._edges, key=cmp)
+
     def __iter__(self):
         """Return iterator by vertices.
 
